@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Aastha Tripathi",
+      "email": "astha589 @gmail.com",
+      "mobile": 58436898986,
+      "address": "royal society gaurabagh",
+      "services": "Chai wala"
+    },
+    {
+      "id": 3,
+      "name": "Manu Mishra",
+      "email": "6394manu@gmail.com",
+      "mobile": 63943599526,
+      "address": " royal society akbarpur ambedkarnagar",
+      "services": " Coffee, chai etc"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
