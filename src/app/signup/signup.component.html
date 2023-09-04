@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>-:Registration Form Here:-</h1>
+          <h5> 😊Get free Membership 😊</h5><hr>
+         </div>
+         <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label  class="form-label">Name</label>
+            <input formControlName="name" [ngClass]="{'is-invalid': signupForm.controls['name'].errors}"  type="text" class="form-control" placeholder="Enter your name"   id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input formControlName="email" [ngClass]="{'is-invalid': signupForm.controls['email'].errors}" type="email" class="form-control" placeholder="Enter your Email"  id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+          <div class="mb-3">
+            <label  class="form-label">Password</label>
+            <input formControlName="password" [ngClass]="{'is-invalid': signupForm.controls['password'].errors}" type="password" class="form-control" placeholder="Enter password" id="exampleInputPassword1">
+          </div>
+
+          <button type="submit" class="btn btn-success">Signup</button>
+        </form>
+        <a routerLink="/login">Allready Member ?Click to login!</a>
+      </div>
+    </div>
+  </div>
+</div>
+

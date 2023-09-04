@@ -1,0 +1,30 @@
+h2{
+  color:white;
+}
+h3{
+  color:green;
+  padding-left: 20px;
+}
+h1{
+  color:mediumseagreen;
+}
+p{
+  color: mediumorchid;
+}
+.slider{
+  width: 100%;
+  height: 450px;
+}
+
+.modal-dialog{
+  color: green;
+}
+
+.modal-header{
+  color:violet;
+  background-color: aqua;
+  font-size: 20px;
+  font-style: italic;
+  text-align:center;
+}
+

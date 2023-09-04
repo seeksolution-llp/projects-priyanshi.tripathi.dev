@@ -1,0 +1,93 @@
+<nav class="navbar navbar-light bg-success">
+  <div class="container-fluid">
+    <h2>ECOMMERCE SHOPPING DETAILS</h2>
+    <h5 *ngFor="let data of  allResturantData">{{data.name}}</h5>
+    <div class="d-flex">
+      <button (click)="clickAddResto()"  type="button" class="btn btn-warning" data-bs-toggle="modal"  data-bs-target="#exampleModal">Add Product Detail</button>
+      <button routerLink="/login"  class="btn btn-danger mx-3">Log Out</button>
+    </div>
+  </div>
+</nav>
+
+<!--Table Shown here-->
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col"> ID</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Final Price</th>
+      <th scope="col">Action</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of  allResturantData">
+      <td>{{data.id}}</td>
+      <td>{{data.productname}}</td>
+      <td>{{data.category}}</td>
+      <td>{{data.price}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.discount}}%</td>
+      <td>{{data.finalprice}}</td>
+
+      <td>
+        <button class="btn btn-info"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)=" onEditResto(data)">Edit</button>&nbsp;
+        <button class="btn btn-danger" (click)="deleteResto(data)">DELETE</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register Here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <form [formGroup]="formValue">
+
+        <div class="mb-3">
+          <label class="form-label">Product Name</label>
+           <input type="text" formControlName="productname" class="form-control" id="staticEmail" placeholder="Enter Product name">
+         </div>
+        <div class="mb-3">
+          <label class="form-label">Product Category</label>
+
+            <input type="email" formControlName="category"  class="form-control" id="inputPassword" placeholder="Enter product category">
+       </div>
+       <div class="mb-3">
+        <label class="form-label">Product Price</label>
+
+          <input type="number" formControlName="price" class="form-control" id="inputPassword" placeholder="Enter Product price">
+     </div>
+     <div class="mb-3">
+      <label class="form-label">Description</label>
+
+        <textarea type="text" formControlName="description"class="form-control" id="inputPassword" placeholder=" write description here"></textarea>
+   </div>
+   <div class="mb-3">
+    <label class="form-label"> Total Discount</label>
+
+      <input type="number" formControlName="discount" class="form-control" id="inputPassword" placeholder="Total % discount">
+ </div>
+
+
+        </form>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" data-bs-dismiss="modal"  class="btn btn-primary" (click)="addResto()">Add Product</button>
+        <button type="button" *ngIf="showbtn"  data-bs-dismiss="modal" class="btn btn-primary" (click)="updateResto()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

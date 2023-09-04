@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "productname": "NeckBand",
+      "category": "Electronic Device",
+      "description": "good product",
+      "price": 2000,
+      "discount": 20,
+      "finalprice": 1800,
+      "name": ""
+    },
+    {
+      "id": 2,
+      "productname": "Laptop",
+      "category": "Electronic Device",
+      "description": "this is electronic device",
+      "price": 1000,
+      "discount": 10,
+      "finalprice": 900,
+      "name": ""
+    }
+  ],
+  "Signup": [
+    {
+      "name": "Priyanshi Tripathi",
+      "email": "astha6394@gmail.com",
+      "password": "1234567890",
+      "id": 1
+    },
+    {
+      "name": "subhi",
+      "email": "7542subhi@gmail.com",
+      "password": "456asd@0",
+      "id": 2
+    },
+    {
+      "name": "subhi",
+      "email": "7542subhi@gmail.com",
+      "password": "asdfghjkl",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
